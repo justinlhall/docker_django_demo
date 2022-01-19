@@ -12,9 +12,10 @@ RUN apt-get install -y mariadb-client-10.3
 RUN apt-get install -y mariadb-client-core-10.3
 RUN apt-get install -y mariadb-common
 RUN apt-get install -y dos2unix
+RUN sed '/st_mysql_options options;/a unsigned int reconnect;' /usr/include/mysql/mysql.h -i.bkp
 
 # Install required python packages
-COPY requirements.txt .
+COPY requirements.txt . 
 RUN pip install -r requirements.txt
 
 # Create and set working dir

@@ -1,6 +1,7 @@
 version: "3"
 services:
   mysql_db:
+    platform: linux/x86_64
     image: mysql:5.7
     environment:
       - MYSQL_DATABASE=django_tutorials
