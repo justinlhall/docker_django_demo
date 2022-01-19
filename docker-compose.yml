@@ -1,0 +1,23 @@
+version: "3"
+services:
+  mysql_db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=django_tutorials
+      - MYSQL_ROOT_PASSWORD=abc123
+    ports:
+      - "13306:3306"
+  django:
+    build: .
+    command: runserver 0.0.0.0:8000
+    environment:
+      - DATABASE_NAME=django_tutorials
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=abc123
+      - DATABASE_HOST=mysql_db
+    volumes:
+      - .:/django
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql_db
