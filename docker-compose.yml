@@ -16,6 +16,7 @@ services:
       - DATABASE_USER=root
       - DATABASE_PASSWORD=abc123
       - DATABASE_HOST=mysql_db
+      - DATABASE_PORT=3306
     volumes:
       - .:/django
     ports:
