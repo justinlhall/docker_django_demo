@@ -22,5 +22,10 @@ RUN pip install -r requirements.txt
 RUN mkdir -p /django
 WORKDIR /django
 
+# copy django-admin utilities to the working directory
+RUN cp /usr/local/bin/django-admin.py /django/django-admin.py
+
+RUN echo 'alias django-admin="python /usr/local/bin/django-admin.py"' >> ~/.bashrc
+
 # Additional python packages only used in docker
 RUN pip install coverage

@@ -10,7 +10,7 @@ services:
       - "13306:3306"
   django:
     build: .
-    command: runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000
     environment:
       - DATABASE_NAME=django_tutorials
       - DATABASE_USER=root
