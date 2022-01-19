@@ -1,0 +1,14 @@
+.DS_Store
+*.pyc
+*.py~
+*.html~
+*.swp
+.idea/
+*.vagrant
+*.sqlite3
+env/
+media/authorize/*
+media/private/*
+.tox
+testenv/media/*
+.coverage

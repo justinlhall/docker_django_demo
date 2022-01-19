@@ -1,0 +1,59 @@
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+.idea
+*.swp
+.env
+*.sql
+
+# temp and test files
+testenv/media/
+media/barcode/
+media/form/
+media/offline/
+tmp/
+*.sqlite3
+env/
+.tox/
+.coverage
+coverage_report/
+
+# Python
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod] # ignores .pyc .pyo and .pyd
+*.pyc
+
+# C extensions
+*.so
+
+# emacs
+*.elc
+\#*#
+.cask
+TAGS
+tags
+
+*.vagrant
+media/network/*
+media/imports/*
+media/agent/*
+media/private/*
+media/print/*
+media/report/*
+
+# emacs
+*.elc
+\#*#
+.cask
+TAGS
+tags
+testenv/settings.py
