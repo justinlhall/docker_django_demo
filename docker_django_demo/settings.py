@@ -107,10 +107,10 @@ ROOT_URLCONF = 'docker_django_demo.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'docker_django_demo.wsgi.application'
 
+PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
+
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_ROOT, 'templates/'), 
 )
 
 INSTALLED_APPS = (
